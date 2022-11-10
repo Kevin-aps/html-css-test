@@ -1,3 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #05224e;
+  font-size: 16px;
+}
+
 nav {
   background-image: linear-gradient(to right, #05224e, #335588);
 }
@@ -19,8 +28,171 @@ nav > .container {
   width: 100%;
   background-color: rgb(243, 94, 119);
   color: white;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main.container-fluid {
+  margin: 0;
+  padding: 0 30px;
+}
+.video-player-container {
+  margin: 0;
+  padding-right: 24;
 }
 
 .video-player {
   border-radius: 0.25rem;
+}
+
+.feedback-container,
+.video-player,
+#pills-tab {
+  box-shadow: 0 0 10px #ccc;
+  border-radius: 1rem;
+  padding: 0;
+}
+.accordion-item {
+  border: none;
+}
+
+#headingTwo > button[class~="collapsed"] {
+  border-radius: 1rem;
+}
+
+#headingTwo > button {
+  border-radius: 1rem 1rem 0 0;
+}
+
+/* border-radius: 1rem; */
+
+.accordion-collapse > .accordion-body {
+  box-shadow: 0 0 10px rgb(188, 188, 188);
+  border-radius: 0 0 1rem 1rem;
+}
+
+#myTab {
+  width: 100%;
+  background-color: rgb(223, 217, 217);
+  border-radius: 1rem 1rem 0 0;
+}
+
+#myTab button {
+  color: rgb(160, 160, 160);
+  width: 100%;
+}
+
+#myTab button[class~="active"] {
+  color: #05224e;
+  background-color: white;
+}
+
+#myTabContent {
+  height: 95%;
+  display: flex;
+}
+
+#question-tab-pane {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.nav-item {
+  flex-grow: 1;
+  border-radius: 1rem;
+}
+
+.nav-link {
+  border: none;
+  height: 70px;
+}
+
+#question-container {
+  width: 100%;
+  padding: 10px;
+}
+#question-container > form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.row,
+.main-content {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.col-9 {
+  padding-left: 0;
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed) {
+  background-color: #05224e;
+  color: white;
+}
+
+#faq-link a:link {
+  color: #05224e;
+}
+#faq-link > span {
+  font-size: 2rem;
+}
+
+.technical-support form > label {
+  font-weight: bold;
+  width: 100%;
+}
+
+.accordion-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-body textarea {
+  border: 2px solid #05224e;
+  border-radius: 1rem;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.btn.btn-primary {
+  background-color: rgb(243, 94, 119);
+  color: white;
+  border: none;
+}
+
+.main-content {
+  width: 100%;
+  margin: 50px 0;
+}
+
+#pills-tab {
+  background-color: #fff;
+  margin-right: 0;
+}
+#pills-tab button {
+  color: #05224e;
+  width: 100%;
+  border-radius: 0;
+}
+
+#pills-tab button[class~="active"] {
+  background-color: rgb(243, 94, 119);
+  color: white;
+}
+
+#pills-tab .nav-item:first-of-type > button {
+  border-radius: 1rem 0 0 1rem;
+}
+
+#pills-tab .nav-item:last-of-type > button {
+  border-radius: 0 1rem 1rem 0;
 }

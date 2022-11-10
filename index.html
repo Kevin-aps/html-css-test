@@ -40,26 +40,179 @@
 
     <main class="container-fluid">
       <div class="row gx-5">
-        <div class="content-container col-8">
-          <div class="video-player-container">
-            <div style="padding: 56.25% 0 0 0; position: relative">
-              <iframe
-                src="https://player.vimeo.com/video/163721649?h=7eff968989&title=0&byline=0&portrait=0"
-                style="
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                "
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
-                class="video-player"
-              ></iframe>
-            </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
+        <div class="video-player-container col-9">
+          <div style="padding: 56.25% 0 0 0; position: relative">
+            <iframe
+              src="https://player.vimeo.com/video/163721649?h=7eff968989&title=0&byline=0&portrait=0"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              class="video-player"
+            ></iframe>
           </div>
+          <script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
+
+        <div class="feedback-container col-3">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="question-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#question-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="question-tab-pane"
+                aria-selected="true"
+              >
+                ASK A QUESTION
+              </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="polling-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#polling-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="polling-tab-pane"
+                aria-selected="true"
+              >
+                POLLING
+              </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="evaluation-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#evaluation-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="evaluation-tab-pane"
+                aria-selected="true"
+              >
+                EVALUATION
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="myTabContent">
+            <div
+              class="tab-pane fade show active"
+              id="question-tab-pane"
+              role="tabpanel"
+              aria-labelledby="question-tab"
+              tabindex="0"
+            >
+              <article id="question-container">
+                <form action="">
+                  <label for="question">Your Question*</label>
+                  <textarea
+                    name="question"
+                    id="question"
+                    cols="30"
+                    rows="20"
+                  ></textarea>
+                  <button type="submit" class="btn btn-primary">
+                    SUBMIT QUESTION
+                  </button>
+                </form>
+              </article>
+            </div>
+
+            <div
+              class="tab-pane fade"
+              id="polling-tab-pane"
+              role="tabpanel"
+              aria-labelledby="polling-tab"
+              tabindex="0"
+            >
+              <article id="polling-container">
+                <form action="">
+                  <div>
+                    Sample Question:
+
+                    <input
+                      type="radio"
+                      id="answer1"
+                      name="answer"
+                      value="answer 1"
+                    />
+                    <label for="answer1">Answer 1</label>
+
+                    <input
+                      type="radio"
+                      id="answer2"
+                      name="answer"
+                      value="answer 2"
+                    />
+                    <label for="answer2">Answer 2</label>
+
+                    <input
+                      type="radio"
+                      id="answer3"
+                      name="answer"
+                      value="answer 3"
+                    />
+                    <label for="answer3">Answer 3</label>
+
+                    <button type="submit">Submit</button>
+                  </div>
+                </form>
+              </article>
+            </div>
+
+            <div
+              class="tab-pane fade"
+              id="evaluation-tab-pane"
+              role="tabpanel"
+              aria-labelledby="evaluation-tab"
+              tabindex="0"
+            >
+              <article id="evaluation-container">
+                <form action="">
+                  <div>
+                    Rate from 1 - 5:
+
+                    <input type="radio" id="option1" name="rating" value="1" />
+                    <label for="option1">1</label>
+
+                    <input type="radio" id="option2" name="rating" value="2" />
+                    <label for="option2">2</label>
+
+                    <input type="radio" id="option3" name="rating" value="3" />
+                    <label for="option3">3</label>
+                  </div>
+                  <div>
+                    <label for="additional-remarks">Additional remarks:</label>
+                    <textarea
+                      name="additional-remarks"
+                      id="additional-remarks"
+                      cols="30"
+                      rows="10"
+                    ></textarea>
+                  </div>
+                  <button type="submit">Submit</button>
+                </form>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div class="content-container col-9">
           <section class="technical-support">
             <div class="accordion">
               <div class="accordion-item">
@@ -83,12 +236,15 @@
                 >
                   <div class="accordion-body">
                     <div id="faq-link">
-                      Have you checked our FAQ? <a href="#">Click here</a>
+                      <span
+                        >Have you checked our FAQ?
+                        <a href="#">Click here</a></span
+                      >
                     </div>
                     <form action="">
                       <label for="message"
-                        >Please provide details fof the issue you are
-                        experiencing *</label
+                        >Please provide details of the issue you are
+                        having</label
                       >
                       <textarea
                         name="message"
@@ -100,7 +256,9 @@
                         Useful information to include: Operating system, web
                         browser, internet connection type.
                       </p>
-                      <button type="submit">Submit</button>
+                      <button type="button" class="btn btn-primary">
+                        SUBMIT
+                      </button>
                     </form>
                   </div>
                 </div>
@@ -108,334 +266,502 @@
             </div>
           </section>
           <section class="main-content">
-            <ul class="nav-tabs">
-              <li>WELCOME</li>
-              <li>AGENDA</li>
-              <li>FACULTY</li>
-              <li>BREAKOUTS</li>
-              <li>RESOURCES</li>
-              <li>POSTERS</li>
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="pills-welcome-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-welcome"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-welcome"
+                  aria-selected="true"
+                >
+                  WELCOME
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-agenda-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-agenda"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-agenda"
+                  aria-selected="false"
+                >
+                  AGENDA
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-faculty-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-faculty"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-faculty"
+                  aria-selected="false"
+                >
+                  FACULTY
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-breakouts-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-breakouts"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-breakouts"
+                  aria-selected="false"
+                >
+                  BREAKOUTS
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-resoursces-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-resoursces"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-resoursces"
+                  aria-selected="false"
+                >
+                  RESOURCES
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-posters-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-posters"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-posters"
+                  aria-selected="false"
+                >
+                  POSTERS
+                </button>
+              </li>
             </ul>
 
-            <article id="welcome">
-              <h2>WELCOME</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Facilis neque dolor tempore quasi, ab culpa provident iusto
-                sapiente dignissimos consectetur deserunt incidunt cupiditate
-                commodi voluptate non. Ducimus reprehenderit nemo pariatur
-                aliquam corporis, placeat esse obcaecati earum qui, ipsam labore
-                sapiente quas expedita sed assumenda magni accusantium autem.
-                Laborum consectetur aliquam, itaque eum pariatur reiciendis
-                porro tenetur. Veniam dolores est in. Quasi cum iusto ipsam
-                illum ea natus dicta distinctio nulla.
-              </p>
-            </article>
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="pills-welcome"
+                role="tabpanel"
+                aria-labelledby="pills-welcome-tab"
+                tabindex="0"
+              >
+                <article id="welcome">
+                  <h2>WELCOME</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sapiente laboriosam possimus itaque repellat provident
+                    accusantium cupiditate suscipit soluta eveniet,
+                    consequuntur, minima facilis culpa vero facere nam corporis
+                    ea dignissimos sed? Iusto eos illum provident veniam
+                    expedita, amet quos consectetur hic voluptatum iure maxime!
+                    Recusandae nesciunt ex, animi aspernatur corporis commodi
+                    aut eligendi quaerat repellendus voluptatibus dolor
+                    repudiandae sunt tempora distinctio assumenda ducimus saepe
+                    ipsa officia, magni iure voluptate, sequi modi nulla nobis?
+                    Quisquam similique dolorum in inventore, eius sapiente
+                    eaque, reiciendis nulla asperiores necessitatibus beatae non
+                    autem consectetur cum omnis repellat velit consequuntur
+                    consequatur, nesciunt sequi dolores. Vero harum voluptatibus
+                    nihil dolorum debitis animi molestiae iure, et quisquam,
+                    nisi dignissimos amet hic mollitia est rem nobis nemo,
+                    ratione ullam aspernatur. Commodi nisi repudiandae ducimus
+                    iste neque perspiciatis veritatis ea repellat sequi corrupti
+                    quas dignissimos explicabo distinctio laborum maiores
+                    tenetur quos consequuntur, non asperiores. Sit esse placeat
+                    sequi adipisci iusto et!
+                  </p>
 
-            <article id="agenda">
-              <div class="presenter-container">
-                <div class="agenda-time">
-                  <time>08:00</time> - <time>08:30</time>
-                  <img
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                    alt=""
-                    height="100"
-                    width="150"
-                  />
-                  <div class="presenter-content">
-                    <p>Presentation Title</p>
-                    <p>Presenter</p>
+                  <div class="faculty-member">
+                    <img
+                      src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                      alt=""
+                      height="100"
+                      width="150"
+                    />
+                    <p>Faculty Member</p>
+                    <p>Affiliation</p>
+                    <button>READ MORE</button>
+                  </div>
+                  <div class="faculty-member">
+                    <img
+                      src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                      alt=""
+                      height="100"
+                      width="150"
+                    />
+                    <p>Faculty Member</p>
+                    <p>Affiliation</p>
+                    <button>READ MORE</button>
+                  </div>
+                  <div class="faculty-member">
+                    <img
+                      src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                      alt=""
+                      height="100"
+                      width="150"
+                    />
+                    <p>Faculty Member</p>
+                    <p>Affiliation</p>
+                    <button>READ MORE</button>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-agenda"
+                role="tabpanel"
+                aria-labelledby="pills-agenda-tab"
+                tabindex="0"
+              >
+                <article id="agenda">
+                  <div class="presenter-container">
+                    <div class="agenda-time">
+                      <time>08:00</time> - <time>08:30</time>
+                      <img
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                        alt=""
+                        height="100"
+                        width="150"
+                      />
+                      <div class="presenter-content">
+                        <p>Presentation Title</p>
+                        <p>Presenter</p>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Unde similique nemo perspiciatis iusto incidunt
+                          quam labore velit, facilis, et dolores necessitatibus
+                          maiores non consequatur delectus dicta minima aliquam.
+                          Alias quaerat blanditiis sint et rerum, assumenda ipsa
+                          quos aperiam libero voluptatibus, explicabo adipisci
+                          eaque ullam consequatur voluptas qui neque quia
+                          voluptate!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="presenter-container">
+                    <div class="agenda-time">
+                      <time>08:00</time> - <time>08:30</time>
+                      <img
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                        alt=""
+                        height="100"
+                        width="150"
+                      />
+                      <div class="presenter-content">
+                        <p>Presentation Title</p>
+                        <p>Presenter</p>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Unde similique nemo perspiciatis iusto incidunt
+                          quam labore velit, facilis, et dolores necessitatibus
+                          maiores non consequatur delectus dicta minima aliquam.
+                          Alias quaerat blanditiis sint et rerum, assumenda ipsa
+                          quos aperiam libero voluptatibus, explicabo adipisci
+                          eaque ullam consequatur voluptas qui neque quia
+                          voluptate!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="presenter-container">
+                    <div class="agenda-time">
+                      <time>08:00</time> - <time>08:30</time>
+                      <img
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                        alt=""
+                        height="100"
+                        width="150"
+                      />
+                      <div class="presenter-content">
+                        <p>Presentation Title</p>
+                        <p>Presenter</p>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Unde similique nemo perspiciatis iusto incidunt
+                          quam labore velit, facilis, et dolores necessitatibus
+                          maiores non consequatur delectus dicta minima aliquam.
+                          Alias quaerat blanditiis sint et rerum, assumenda ipsa
+                          quos aperiam libero voluptatibus, explicabo adipisci
+                          eaque ullam consequatur voluptas qui neque quia
+                          voluptate!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-faculty"
+                role="tabpanel"
+                aria-labelledby="pills-faculty-tab"
+                tabindex="0"
+              >
+                <article id="faculty">
+                  <div class="faculty-member">
+                    <img
+                      src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                      alt=""
+                      height="100"
+                      width="150"
+                    />
+                    <p>Faculty Member</p>
+                    <p>Affiliation</p>
+                    <button>READ MORE</button>
+                  </div>
+                  <div class="faculty-member">
+                    <img
+                      src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                      alt=""
+                      height="100"
+                      width="150"
+                    />
+                    <p>Faculty Member</p>
+                    <p>Affiliation</p>
+                    <button>READ MORE</button>
+                  </div>
+                  <div class="faculty-member">
+                    <img
+                      src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                      alt=""
+                      height="100"
+                      width="150"
+                    />
+                    <p>Faculty Member</p>
+                    <p>Affiliation</p>
+                    <button>READ MORE</button>
+                  </div>
+                  <div class="faculty-member">
+                    <img
+                      src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                      alt=""
+                      height="100"
+                      width="150"
+                    />
+                    <p>Faculty Member</p>
+                    <p>Affiliation</p>
+                    <button>READ MORE</button>
+                  </div>
+                  <div class="faculty-member">
+                    <img
+                      src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                      alt=""
+                      height="100"
+                      width="150"
+                    />
+                    <p>Faculty Member</p>
+                    <p>Affiliation</p>
+                    <button>READ MORE</button>
+                  </div>
+                  <div class="faculty-member">
+                    <img
+                      src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                      alt=""
+                      height="100"
+                      width="150"
+                    />
+                    <p>Faculty Member</p>
+                    <p>Affiliation</p>
+                    <button>READ MORE</button>
+                  </div>
+                  <div class="faculty-member">
+                    <img
+                      src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                      alt=""
+                      height="100"
+                      width="150"
+                    />
+                    <p>Faculty Member</p>
+                    <p>Affiliation</p>
+                    <button>READ MORE</button>
+                  </div>
+                  <div class="faculty-member">
+                    <img
+                      src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                      alt=""
+                      height="100"
+                      width="150"
+                    />
+                    <p>Faculty Member</p>
+                    <p>Affiliation</p>
+                    <button>READ MORE</button>
+                  </div>
+                  <div class="faculty-member">
+                    <img
+                      src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                      alt=""
+                      height="100"
+                      width="150"
+                    />
+                    <p>Faculty Member</p>
+                    <p>Affiliation</p>
+                    <button>READ MORE</button>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-breakouts"
+                role="tabpanel"
+                aria-labelledby="pills-breakouts-tab"
+                tabindex="0"
+              >
+                <article id="breakouts">
+                  <div class="breakout-container">
+                    <p>Breakout 1</p>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Unde similique nemo perspiciatis iusto incidunt quam
-                      labore velit, facilis, et dolores necessitatibus maiores
-                      non consequatur delectus dicta minima aliquam. Alias
-                      quaerat blanditiis sint et rerum, assumenda ipsa quos
-                      aperiam libero voluptatibus, explicabo adipisci eaque
-                      ullam consequatur voluptas qui neque quia voluptate!
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
                     </p>
+                    <button>VIEW</button>
                   </div>
-                </div>
-              </div>
-
-              <div class="presenter-container">
-                <div class="agenda-time">
-                  <time>08:00</time> - <time>08:30</time>
-                  <img
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                    alt=""
-                    height="100"
-                    width="150"
-                  />
-                  <div class="presenter-content">
-                    <p>Presentation Title</p>
-                    <p>Presenter</p>
+                  <div class="breakout-container">
+                    <p>Breakout 2</p>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Unde similique nemo perspiciatis iusto incidunt quam
-                      labore velit, facilis, et dolores necessitatibus maiores
-                      non consequatur delectus dicta minima aliquam. Alias
-                      quaerat blanditiis sint et rerum, assumenda ipsa quos
-                      aperiam libero voluptatibus, explicabo adipisci eaque
-                      ullam consequatur voluptas qui neque quia voluptate!
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
                     </p>
+                    <button>VIEW</button>
                   </div>
-                </div>
-              </div>
-
-              <div class="presenter-container">
-                <div class="agenda-time">
-                  <time>08:00</time> - <time>08:30</time>
-                  <img
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                    alt=""
-                    height="100"
-                    width="150"
-                  />
-                  <div class="presenter-content">
-                    <p>Presentation Title</p>
-                    <p>Presenter</p>
+                  <div class="breakout-container">
+                    <p>Breakout 3</p>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Unde similique nemo perspiciatis iusto incidunt quam
-                      labore velit, facilis, et dolores necessitatibus maiores
-                      non consequatur delectus dicta minima aliquam. Alias
-                      quaerat blanditiis sint et rerum, assumenda ipsa quos
-                      aperiam libero voluptatibus, explicabo adipisci eaque
-                      ullam consequatur voluptas qui neque quia voluptate!
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
                     </p>
+                    <button>VIEW</button>
                   </div>
-                </div>
+                  <div class="breakout-container">
+                    <p>Breakout 4</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
+                    </p>
+                    <button>VIEW</button>
+                  </div>
+                  <div class="breakout-container">
+                    <p>Breakout 5</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
+                    </p>
+                    <button>VIEW</button>
+                  </div>
+                  <div class="breakout-container">
+                    <p>Breakout 6</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
+                    </p>
+                    <button>VIEW</button>
+                  </div>
+                </article>
               </div>
-            </article>
 
-            <article id="faculty">
-              <div class="faculty-member">
-                <img
-                  src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                  alt=""
-                  height="100"
-                  width="150"
-                />
-                <p>Faculty Member</p>
-                <p>Affiliation</p>
-                <button>READ MORE</button>
+              <div
+                class="tab-pane fade"
+                id="pills-resources"
+                role="tabpanel"
+                aria-labelledby="pills-resources-tab"
+                tabindex="0"
+              >
+                <article id="resources">
+                  <div class="resource-container">
+                    <p>Resource 1</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
+                    </p>
+                    <button>VIEW</button>
+                  </div>
+                  <div class="resource-container">
+                    <p>Resource 2</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
+                    </p>
+                    <button>VIEW</button>
+                  </div>
+                  <div class="resource-container">
+                    <p>Resource 3</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
+                    </p>
+                    <button>VIEW</button>
+                  </div>
+                  <div class="resource-container">
+                    <p>Resource 4</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
+                    </p>
+                    <button>VIEW</button>
+                  </div>
+                  <div class="resource-container">
+                    <p>Resource 5</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
+                    </p>
+                    <button>VIEW</button>
+                  </div>
+                  <div class="resource-container">
+                    <p>Resource 6</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
+                    </p>
+                    <button>VIEW</button>
+                  </div>
+                </article>
               </div>
-              <div class="faculty-member">
-                <img
-                  src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                  alt=""
-                  height="100"
-                  width="150"
-                />
-                <p>Faculty Member</p>
-                <p>Affiliation</p>
-                <button>READ MORE</button>
-              </div>
-              <div class="faculty-member">
-                <img
-                  src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                  alt=""
-                  height="100"
-                  width="150"
-                />
-                <p>Faculty Member</p>
-                <p>Affiliation</p>
-                <button>READ MORE</button>
-              </div>
-              <div class="faculty-member">
-                <img
-                  src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                  alt=""
-                  height="100"
-                  width="150"
-                />
-                <p>Faculty Member</p>
-                <p>Affiliation</p>
-                <button>READ MORE</button>
-              </div>
-              <div class="faculty-member">
-                <img
-                  src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                  alt=""
-                  height="100"
-                  width="150"
-                />
-                <p>Faculty Member</p>
-                <p>Affiliation</p>
-                <button>READ MORE</button>
-              </div>
-              <div class="faculty-member">
-                <img
-                  src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                  alt=""
-                  height="100"
-                  width="150"
-                />
-                <p>Faculty Member</p>
-                <p>Affiliation</p>
-                <button>READ MORE</button>
-              </div>
-              <div class="faculty-member">
-                <img
-                  src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                  alt=""
-                  height="100"
-                  width="150"
-                />
-                <p>Faculty Member</p>
-                <p>Affiliation</p>
-                <button>READ MORE</button>
-              </div>
-              <div class="faculty-member">
-                <img
-                  src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                  alt=""
-                  height="100"
-                  width="150"
-                />
-                <p>Faculty Member</p>
-                <p>Affiliation</p>
-                <button>READ MORE</button>
-              </div>
-              <div class="faculty-member">
-                <img
-                  src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                  alt=""
-                  height="100"
-                  width="150"
-                />
-                <p>Faculty Member</p>
-                <p>Affiliation</p>
-                <button>READ MORE</button>
-              </div>
-            </article>
 
-            <article id="breakouts">
-              <div class="breakout-container">
-                <p>Breakout 1</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-              <div class="breakout-container">
-                <p>Breakout 2</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-              <div class="breakout-container">
-                <p>Breakout 3</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-              <div class="breakout-container">
-                <p>Breakout 4</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-              <div class="breakout-container">
-                <p>Breakout 5</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-              <div class="breakout-container">
-                <p>Breakout 6</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-            </article>
-
-            <article id="resources">
-              <div class="resource-container">
-                <p>Resource 1</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-              <div class="resource-container">
-                <p>Resource 2</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-              <div class="resource-container">
-                <p>Resource 3</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-              <div class="resource-container">
-                <p>Resource 4</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-              <div class="resource-container">
-                <p>Resource 5</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-              <div class="resource-container">
-                <p>Resource 6</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-            </article>
+              <!-- <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...</div> -->
+            </div>
 
             <article id="posters">
               <div class="poster-container">
@@ -530,173 +856,6 @@
               </div>
             </article>
           </section>
-        </div>
-        <div class="feedback-container col-4">
-          <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">ASK A QUESTION</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">POLLING</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link">EVALUATION</a>
-            </li>
-          </ul>
-
-          <article id="question-container">
-            <form action="">
-              <label for="question">Your Question*</label>
-              <textarea
-                name="question"
-                id="question"
-                cols="30"
-                rows="20"
-              ></textarea>
-              <button type="submit">SUBMIT QUESTION</button>
-            </form>
-          </article>
-          <article id="polling-container">
-            <form action="">
-              <div>
-                Sample Question:
-
-                <input
-                  type="radio"
-                  id="answer1"
-                  name="answer"
-                  value="answer 1"
-                />
-                <label for="answer1">Answer 1</label>
-
-                <input
-                  type="radio"
-                  id="answer2"
-                  name="answer"
-                  value="answer 2"
-                />
-                <label for="answer2">Answer 2</label>
-
-                <input
-                  type="radio"
-                  id="answer3"
-                  name="answer"
-                  value="answer 3"
-                />
-                <label for="answer3">Answer 3</label>
-
-                <button type="submit">Submit</button>
-              </div>
-            </form>
-          </article>
-          <article id="evaluation-container">
-            <form action="">
-              <div>
-                Rate from 1 - 5:
-
-                <input type="radio" id="option1" name="rating" value="1" />
-                <label for="option1">1</label>
-
-                <input type="radio" id="option2" name="rating" value="2" />
-                <label for="option2">2</label>
-
-                <input type="radio" id="option3" name="rating" value="3" />
-                <label for="option3">3</label>
-              </div>
-              <div>
-                <label for="additional-remarks">Additional remarks:</label>
-                <textarea
-                  name="additional-remarks"
-                  id="additional-remarks"
-                  cols="30"
-                  rows="10"
-                ></textarea>
-              </div>
-              <button type="submit">Submit</button>
-            </form>
-          </article>
-          <div class="feedback-container col-4">
-            <ul>
-              <li>ASK A QUESTION</li>
-              <li>POLLING</li>
-              <li>EVALUATION</li>
-            </ul>
-
-            <article id="question-container">
-              <form action="">
-                <label for="question">Your Question*</label>
-                <textarea
-                  name="question"
-                  id="question"
-                  cols="30"
-                  rows="20"
-                ></textarea>
-                <button type="submit">SUBMIT QUESTION</button>
-              </form>
-            </article>
-            <article id="polling-container">
-              <form action="">
-                <div>
-                  Sample Question:
-
-                  <input
-                    type="radio"
-                    id="answer1"
-                    name="answer"
-                    value="answer 1"
-                  />
-                  <label for="answer1">Answer 1</label>
-
-                  <input
-                    type="radio"
-                    id="answer2"
-                    name="answer"
-                    value="answer 2"
-                  />
-                  <label for="answer2">Answer 2</label>
-
-                  <input
-                    type="radio"
-                    id="answer3"
-                    name="answer"
-                    value="answer 3"
-                  />
-                  <label for="answer3">Answer 3</label>
-
-                  <button type="submit">Submit</button>
-                </div>
-              </form>
-            </article>
-            <article id="evaluation-container">
-              <form action="">
-                <div>
-                  Rate from 1 - 5:
-
-                  <input type="radio" id="option1" name="rating" value="1" />
-                  <label for="option1">1</label>
-
-                  <input type="radio" id="option2" name="rating" value="2" />
-                  <label for="option2">2</label>
-
-                  <input type="radio" id="option3" name="rating" value="3" />
-                  <label for="option3">3</label>
-                </div>
-                <div>
-                  <label for="additional-remarks">Additional remarks:</label>
-                  <textarea
-                    name="additional-remarks"
-                    id="additional-remarks"
-                    cols="30"
-                    rows="10"
-                  ></textarea>
-                </div>
-                <button type="submit">Submit</button>
-              </form>
-            </article>
-          </div>
         </div>
       </div>
     </main>
