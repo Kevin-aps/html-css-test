@@ -216,7 +216,7 @@
           <section class="technical-support">
             <div class="accordion">
               <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
+                <h3 class="accordion-header" id="headingTwo">
                   <button
                     class="accordion-button collapsed"
                     type="button"
@@ -227,7 +227,7 @@
                   >
                     TECHNICAL SUPPORT
                   </button>
-                </h2>
+                </h3>
                 <div
                   id="collapseTwo"
                   class="accordion-collapse collapse"
@@ -326,12 +326,12 @@
               <li class="nav-item" role="presentation">
                 <button
                   class="nav-link"
-                  id="pills-resoursces-tab"
+                  id="pills-resourses-tab"
                   data-bs-toggle="pill"
-                  data-bs-target="#pills-resoursces"
+                  data-bs-target="#pills-resourses"
                   type="button"
                   role="tab"
-                  aria-controls="pills-resoursces"
+                  aria-controls="pills-resourses"
                   aria-selected="false"
                 >
                   RESOURCES
@@ -361,64 +361,106 @@
                 aria-labelledby="pills-welcome-tab"
                 tabindex="0"
               >
-                <article id="welcome">
-                  <h2>WELCOME</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sapiente laboriosam possimus itaque repellat provident
-                    accusantium cupiditate suscipit soluta eveniet,
-                    consequuntur, minima facilis culpa vero facere nam corporis
-                    ea dignissimos sed? Iusto eos illum provident veniam
-                    expedita, amet quos consectetur hic voluptatum iure maxime!
-                    Recusandae nesciunt ex, animi aspernatur corporis commodi
-                    aut eligendi quaerat repellendus voluptatibus dolor
-                    repudiandae sunt tempora distinctio assumenda ducimus saepe
-                    ipsa officia, magni iure voluptate, sequi modi nulla nobis?
-                    Quisquam similique dolorum in inventore, eius sapiente
-                    eaque, reiciendis nulla asperiores necessitatibus beatae non
-                    autem consectetur cum omnis repellat velit consequuntur
-                    consequatur, nesciunt sequi dolores. Vero harum voluptatibus
-                    nihil dolorum debitis animi molestiae iure, et quisquam,
-                    nisi dignissimos amet hic mollitia est rem nobis nemo,
-                    ratione ullam aspernatur. Commodi nisi repudiandae ducimus
-                    iste neque perspiciatis veritatis ea repellat sequi corrupti
-                    quas dignissimos explicabo distinctio laborum maiores
-                    tenetur quos consequuntur, non asperiores. Sit esse placeat
-                    sequi adipisci iusto et!
-                  </p>
-
-                  <div class="faculty-member">
-                    <img
-                      src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                      alt=""
-                      height="100"
-                      width="150"
-                    />
-                    <p>Faculty Member</p>
-                    <p>Affiliation</p>
-                    <button>READ MORE</button>
+                <article id="welcome container">
+                  <div class="welcome-info-row row gy-5">
+                    <div class="col">
+                      <h2>WELCOME</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sapiente laboriosam possimus itaque repellat provident
+                        accusantium cupiditate suscipit soluta eveniet,
+                        consequuntur, minima facilis culpa vero facere nam
+                        corporis ea dignissimos sed? Iusto eos illum provident
+                        veniam expedita, amet quos consectetur hic voluptatum
+                        iure maxime! Recusandae nesciunt ex, animi aspernatur
+                        corporis commodi aut eligendi quaerat repellendus
+                        voluptatibus dolor repudiandae sunt tempora distinctio
+                        assumenda ducimus saepe ipsa officia, magni iure
+                        voluptate, sequi modi nulla nobis? Quisquam similique
+                        dolorum in inventore, eius sapiente eaque, reiciendis
+                        nulla asperiores necessitatibus beatae non autem
+                        consectetur cum omnis repellat velit consequuntur
+                        consequatur, nesciunt sequi dolores. Vero harum
+                        voluptatibus nihil dolorum debitis animi molestiae iure,
+                        et quisquam, nisi dignissimos amet hic mollitia e si
+                        repudiandae ducimus iste neque perspiciatis veritatis ea
+                        repellat sequi corrupti quas dignissimos explicabo
+                        distinctio laborum maiores tenetur quos consequuntur,
+                        non asperiores. Sit esse placeat sequi adipisci iusto
+                        et!
+                      </p>
+                    </div>
                   </div>
-                  <div class="faculty-member">
-                    <img
-                      src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                      alt=""
-                      height="100"
-                      width="150"
-                    />
-                    <p>Faculty Member</p>
-                    <p>Affiliation</p>
-                    <button>READ MORE</button>
-                  </div>
-                  <div class="faculty-member">
-                    <img
-                      src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                      alt=""
-                      height="100"
-                      width="150"
-                    />
-                    <p>Faculty Member</p>
-                    <p>Affiliation</p>
-                    <button>READ MORE</button>
+                  <div class="faculty-members-row row gy-5">
+                    <div class="col">
+                      <div class="faculty-members container-fluid">
+                        <div class="row gx-5">
+                          <div class="col-4">
+                            <div
+                              class="faculty-member card position-relative"
+                              style="width: 18rem"
+                            >
+                              <img
+                                src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                class="card-img-top position-absolute top-0 start-50 translate-middle"
+                                alt="..."
+                              />
+                              <div class="card-body">
+                                <div class="faculty-content">
+                                  <p>Faculty Member</p>
+                                  <p>Affiliation</p>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                  READ MORE
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="faculty-member card position-relative"
+                              style="width: 18rem"
+                            >
+                              <img
+                                src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                class="card-img-top position-absolute top-0 start-50 translate-middle"
+                                alt="..."
+                              />
+                              <div class="card-body">
+                                <div class="faculty-content">
+                                  <p>Faculty Member</p>
+                                  <p>Affiliation</p>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                  READ MORE
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="faculty-member card position-relative"
+                              style="width: 18rem"
+                            >
+                              <img
+                                src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                class="card-img-top position-absolute top-0 start-50 translate-middle"
+                                alt="..."
+                              />
+                              <div class="card-body">
+                                <div class="faculty-content">
+                                  <p>Faculty Member</p>
+                                  <p>Affiliation</p>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                  READ MORE
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </article>
               </div>
@@ -436,8 +478,6 @@
                       <img
                         src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                         alt=""
-                        height="100"
-                        width="150"
                       />
                       <div class="presenter-content">
                         <p>Presentation Title</p>
@@ -462,8 +502,6 @@
                       <img
                         src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                         alt=""
-                        height="100"
-                        width="150"
                       />
                       <div class="presenter-content">
                         <p>Presentation Title</p>
@@ -488,8 +526,6 @@
                       <img
                         src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                         alt=""
-                        height="100"
-                        width="150"
                       />
                       <div class="presenter-content">
                         <p>Presentation Title</p>
@@ -521,8 +557,6 @@
                     <img
                       src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                       alt=""
-                      height="100"
-                      width="150"
                     />
                     <p>Faculty Member</p>
                     <p>Affiliation</p>
@@ -532,8 +566,6 @@
                     <img
                       src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                       alt=""
-                      height="100"
-                      width="150"
                     />
                     <p>Faculty Member</p>
                     <p>Affiliation</p>
@@ -543,8 +575,6 @@
                     <img
                       src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                       alt=""
-                      height="100"
-                      width="150"
                     />
                     <p>Faculty Member</p>
                     <p>Affiliation</p>
@@ -554,8 +584,6 @@
                     <img
                       src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                       alt=""
-                      height="100"
-                      width="150"
                     />
                     <p>Faculty Member</p>
                     <p>Affiliation</p>
@@ -565,8 +593,6 @@
                     <img
                       src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                       alt=""
-                      height="100"
-                      width="150"
                     />
                     <p>Faculty Member</p>
                     <p>Affiliation</p>
@@ -576,8 +602,6 @@
                     <img
                       src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                       alt=""
-                      height="100"
-                      width="150"
                     />
                     <p>Faculty Member</p>
                     <p>Affiliation</p>
@@ -587,8 +611,6 @@
                     <img
                       src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                       alt=""
-                      height="100"
-                      width="150"
                     />
                     <p>Faculty Member</p>
                     <p>Affiliation</p>
@@ -598,8 +620,6 @@
                     <img
                       src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                       alt=""
-                      height="100"
-                      width="150"
                     />
                     <p>Faculty Member</p>
                     <p>Affiliation</p>
@@ -609,8 +629,6 @@
                     <img
                       src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                       alt=""
-                      height="100"
-                      width="150"
                     />
                     <p>Faculty Member</p>
                     <p>Affiliation</p>
@@ -691,9 +709,9 @@
 
               <div
                 class="tab-pane fade"
-                id="pills-resources"
+                id="pills-resourses"
                 role="tabpanel"
-                aria-labelledby="pills-resources-tab"
+                aria-labelledby="pills-resourses-tab"
                 tabindex="0"
               >
                 <article id="resources">
@@ -760,101 +778,95 @@
                 </article>
               </div>
 
-              <!-- <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...</div> -->
+              <div
+                class="tab-pane fade"
+                id="pills-posters"
+                role="tabpanel"
+                aria-labelledby="pills-posters-tab"
+                tabindex="0"
+              >
+                <article id="posters">
+                  <div class="poster-container">
+                    <img
+                      src="https://images.unsplash.com/photo-1600682231206-721e1bcba5ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGxhYiUyMGNvbGxhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                      alt=""
+                    />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
+                    </p>
+                    <button>VIEW</button>
+                  </div>
+                  <div class="poster-container">
+                    <img
+                      src="https://images.unsplash.com/photo-1582719367079-bc1b8e5fed9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGxhYiUyMGNvbGxhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                      alt=""
+                    />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
+                    </p>
+                    <button>VIEW</button>
+                  </div>
+                  <div class="poster-container">
+                    <img
+                      src="https://images.unsplash.com/photo-1600682231206-721e1bcba5ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGxhYiUyMGNvbGxhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                      alt=""
+                    />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
+                    </p>
+                    <button>VIEW</button>
+                  </div>
+                  <div class="poster-container">
+                    <img
+                      src="https://images.unsplash.com/photo-1582719367079-bc1b8e5fed9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGxhYiUyMGNvbGxhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                      alt=""
+                    />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
+                    </p>
+                    <button>VIEW</button>
+                  </div>
+                  <div class="poster-container">
+                    <img
+                      src="https://images.unsplash.com/photo-1600682231206-721e1bcba5ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGxhYiUyMGNvbGxhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                      alt=""
+                    />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
+                    </p>
+                    <button>VIEW</button>
+                  </div>
+                  <div class="poster-container">
+                    <img
+                      src="https://images.unsplash.com/photo-1582719367079-bc1b8e5fed9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGxhYiUyMGNvbGxhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                      alt=""
+                    />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Recusandae, amet magni corporis maxime incidunt alias quae
+                      nisi, quasi consequuntur necessitatibus, ratione optio
+                      aperiam odit voluptate!
+                    </p>
+                    <button>VIEW</button>
+                  </div>
+                </article>
+              </div>
             </div>
-
-            <article id="posters">
-              <div class="poster-container">
-                <img
-                  src="https://images.unsplash.com/photo-1600682231206-721e1bcba5ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGxhYiUyMGNvbGxhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-                  alt=""
-                  height="100"
-                  width="150"
-                />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-              <div class="poster-container">
-                <img
-                  src="https://images.unsplash.com/photo-1582719367079-bc1b8e5fed9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGxhYiUyMGNvbGxhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-                  alt=""
-                  height="100"
-                  width="150"
-                />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-              <div class="poster-container">
-                <img
-                  src="https://images.unsplash.com/photo-1600682231206-721e1bcba5ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGxhYiUyMGNvbGxhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-                  alt=""
-                  height="100"
-                  width="150"
-                />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-              <div class="poster-container">
-                <img
-                  src="https://images.unsplash.com/photo-1582719367079-bc1b8e5fed9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGxhYiUyMGNvbGxhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-                  alt=""
-                  height="100"
-                  width="150"
-                />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-              <div class="poster-container">
-                <img
-                  src="https://images.unsplash.com/photo-1600682231206-721e1bcba5ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGxhYiUyMGNvbGxhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-                  alt=""
-                  height="100"
-                  width="150"
-                />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-              <div class="poster-container">
-                <img
-                  src="https://images.unsplash.com/photo-1582719367079-bc1b8e5fed9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGxhYiUyMGNvbGxhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-                  alt=""
-                  height="100"
-                  width="150"
-                />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae, amet magni corporis maxime incidunt alias quae
-                  nisi, quasi consequuntur necessitatibus, ratione optio aperiam
-                  odit voluptate!
-                </p>
-                <button>VIEW</button>
-              </div>
-            </article>
           </section>
         </div>
       </div>
