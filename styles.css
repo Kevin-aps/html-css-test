@@ -292,3 +292,7 @@ div.col-4 > .card {
   margin-bottom: 1rem;
   padding: 0.75rem;
 }
+
+#pills-faculty .row > div {
+  padding-top: 7.5rem;
+}
