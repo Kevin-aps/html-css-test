@@ -5,7 +5,6 @@
 body {
   color: rgb(10, 39, 106);
   font-size: 16px;
-  position: relative;
 }
 
 header {
@@ -67,6 +66,21 @@ main.container-fluid {
 
 .video-player {
   border-radius: 0.25rem;
+}
+
+main .feedback-container {
+  position: fixed;
+  right: 30px;
+  height: 80%;
+  width: 23.5%;
+  border-radius: 1rem;
+  z-index: -1;
+}
+
+#myTab button {
+  padding: 0;
+  border: none;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .feedback-container,
