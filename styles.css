@@ -251,10 +251,6 @@ h2::after {
   color: black;
 }
 
-/* div.faculty-members.container-fluid {
-  width: 100%;
-} */
-
 .faculty-members div.col-4 {
   display: flex;
   justify-content: center;
@@ -277,13 +273,19 @@ div.col-4 > .card {
 }
 
 .faculty-members .card-body,
-.breakout-spaces .card-body {
+.breakout-spaces .card-body,
+.resource-spaces .card-body {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   width: 100%;
+}
+
+.breakout-spaces .card-body,
+.resource-spaces .card-body {
+justify-content: space-evenly;
 }
 
 .faculty-members-row {
@@ -311,18 +313,12 @@ div.col-4 > .card {
   padding-top: 7.5rem;
 }
 
-.breakout-spaces .card-title {
+.breakout-spaces .card-title,.resource-spaces .card-title {
   margin-top: 1.5rem;
   font-weight: bold;
   font-size: 1.125rem;
 }
 
-/* #breakouts .card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-} */
-
-#breakouts p {
+#breakouts p, #resources p {
   text-align: center;
 }
