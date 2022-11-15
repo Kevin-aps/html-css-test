@@ -301,6 +301,10 @@ div.col-4 > .card {
   object-fit: cover;
 }
 
+#posters .card-img-top {
+  border-radius: 1rem 1rem 0 0;
+}
+
 .faculty-members .card-body {
   justify-content: flex-end;
 }
