@@ -27,6 +27,8 @@ header nav.navbar {
 img {
   height: 150px;
   width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .nav-link {
@@ -298,7 +300,6 @@ div.col-4 > .card {
 .card-img-top {
   height: 15rem;
   width: 100%;
-  object-fit: cover;
 }
 
 #posters .card-img-top {
@@ -367,4 +368,60 @@ div.col-4 > .card {
 
 #posters .card-body > * {
   margin-top: 2rem;
+}
+
+.presenter-container {
+  display: flex;
+  box-shadow: 0 0 15px #ccc;
+  border-radius: 1rem;
+  padding: 0;
+}
+
+.agenda-time {
+  padding: 0 5rem;
+  background-color: rgb(223, 217, 217);
+  border-radius: 1rem 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(228, 13, 124);
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 0.75;
+}
+
+time:first-of-type:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 6px;
+  background-color: rgb(228, 13, 124);
+  border-radius: 1rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.presenter-container img {
+  margin: 2rem;
+}
+
+.presenter-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.presenter-heading {
+  margin: 2rem 0 1rem 0;
+}
+
+.presenter-name,
+.presenter-title {
+  font-weight: bold;
+  font-size: 1.125rem;
+  margin-bottom: 0;
+}
+
+.presenter-body {
+  padding-right: 2rem;
 }
