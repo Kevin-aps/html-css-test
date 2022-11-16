@@ -226,6 +226,22 @@ main .feedback-container {
   text-align: left;
 }
 
+.register-interest {
+  display: flex;
+  justify-content: center;
+}
+
+.register-interest button {
+  width: 90%;
+  padding: 0.9rem;
+}
+
+.register-interest {
+  position: fixed;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+}
+
 .main-content {
   width: 100%;
   margin: 50px 0;
@@ -438,6 +454,7 @@ time:first-of-type:after {
 
 footer {
   position: relative;
+  bottom: 0;
   z-index: 1;
   height: 25vh;
 }
