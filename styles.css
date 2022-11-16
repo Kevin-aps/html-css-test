@@ -149,15 +149,33 @@ main .feedback-container {
 
 #question-container {
   width: 100%;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
 }
 
 #question-container > form {
   height: 100%;
   display: flex;
   flex-direction: column;
-
   justify-content: space-between;
+}
+
+#question-container label {
+  color: rgb(228, 13, 124);
+  font-weight: bold;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+#question-container textarea {
+  height: 90%;
+  border-radius: 1rem;
+  border: 2px solid rgb(223, 217, 217);
+  resize: none;
+}
+
+#question-container .btn.btn-primary {
+  margin: 1rem 0;
+  padding: 1rem;
 }
 
 .row,
@@ -204,6 +222,7 @@ main .feedback-container {
   background-color: rgb(228, 13, 124);
   color: white;
   border: none;
+  border-radius: 1rem;
   text-align: left;
 }
 
