@@ -128,8 +128,7 @@ main .feedback-container {
 #myTabContent {
   display: flex;
   position: relative;
-  padding-bottom: .75rem;
-  
+  padding-bottom: 0.75rem;
 }
 
 #question-tab-pane {
@@ -186,31 +185,35 @@ main .feedback-container {
   padding: 1rem;
 }
 
-#evaluation-tab-pane {
+#evaluation-tab-pane,
+#polling-tab-pane {
   position: absolute;
   top: 10px;
   width: 100%;
   padding: 0 1rem 0 1rem;
 }
 
-#evaluation-tab-pane label, #evaluation-tab-pane input {
+#evaluation-tab-pane label,
+#evaluation-tab-pane input,
+#polling-tab-pane input {
   border-radius: 1rem;
 }
 
-#evaluation-tab-pane button {
+#evaluation-tab-pane button,
+#polling-tab-pane button {
   padding: 1rem;
+  width: 100%;
 }
 
-#evaluation-container{
+#evaluation-container,
+#polling-container {
   padding: 1rem 1rem 0 1rem;
 }
 
 #evaluation-container,
 #evaluation-container form {
   height: 100%;
- 
 }
-
 
 .btn-outline-primary {
   background-color: rgb(223, 217, 217);
@@ -220,17 +223,17 @@ main .feedback-container {
   border-radius: 1rem;
 }
 
-.btn-check:hover+.btn {
+.btn-check:hover + .btn {
   background-color: rgb(179, 179, 179);
   color: rgb(5, 22, 59);
 }
 
-.btn-check:checked+.btn {
+.btn-check:checked + .btn {
   background-color: rgb(228, 13, 124);
 }
 
-
-#rating-container {
+#rating-container,
+#poll-container {
   display: flex;
   flex-direction: column;
   height: 100%;
