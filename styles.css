@@ -64,7 +64,7 @@ main.container-fluid {
 
 .video-player-container {
   margin: 0;
-  padding-right: 24;
+  padding-left: 0;
 }
 
 .video-player {
@@ -74,7 +74,6 @@ main.container-fluid {
 main .feedback-container {
   position: fixed;
   right: 30px;
-  height: fit-content;
   width: 23.5%;
   border-radius: 1rem;
 }
