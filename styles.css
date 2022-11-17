@@ -74,7 +74,7 @@ main.container-fluid {
 main .feedback-container {
   position: fixed;
   right: 30px;
-  height: 80%;
+  height: fit-content;
   width: 23.5%;
   border-radius: 1rem;
 }
@@ -126,15 +126,16 @@ main .feedback-container {
 }
 
 #myTabContent {
-  height: 95%;
   display: flex;
+  position: relative;
+  padding-bottom: .75rem;
+  
 }
 
 #question-tab-pane {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .nav-item {
@@ -166,7 +167,14 @@ main .feedback-container {
   margin-bottom: 0.5rem;
 }
 
-#question-container textarea {
+#evaluation-container legend,
+#evaluation-container label.form-label {
+  color: rgb(228, 13, 124);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.feedback-container textarea {
   height: 90%;
   border-radius: 1rem;
   border: 2px solid rgb(223, 217, 217);
@@ -174,8 +182,58 @@ main .feedback-container {
 }
 
 #question-container .btn.btn-primary {
-  margin: 1rem 0;
+  margin: 1rem 0 0 0;
   padding: 1rem;
+}
+
+#evaluation-tab-pane {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  padding: 0 1rem 0 1rem;
+}
+
+#evaluation-tab-pane label, #evaluation-tab-pane input {
+  border-radius: 1rem;
+}
+
+#evaluation-tab-pane button {
+  padding: 1rem;
+}
+
+#evaluation-container{
+  padding: 1rem 1rem 0 1rem;
+}
+
+#evaluation-container,
+#evaluation-container form {
+  height: 100%;
+ 
+}
+
+
+.btn-outline-primary {
+  background-color: rgb(223, 217, 217);
+  color: rgb(5, 22, 59);
+  border: none;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.btn-check:hover+.btn {
+  background-color: rgb(179, 179, 179);
+  color: rgb(5, 22, 59);
+}
+
+.btn-check:checked+.btn {
+  background-color: rgb(228, 13, 124);
+}
+
+
+#rating-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .row,
@@ -239,7 +297,7 @@ main .feedback-container {
 .register-interest {
   position: fixed;
   border-radius: 1rem;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
 }
 
 .main-content {

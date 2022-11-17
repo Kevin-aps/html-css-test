@@ -64,7 +64,7 @@
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link active"
+                class="nav-link active p-3"
                 id="question-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#question-tab-pane"
@@ -181,30 +181,118 @@
               aria-labelledby="evaluation-tab"
               tabindex="0"
             >
-              <article id="evaluation-container">
+              <article id="evaluation-container" >
                 <form action="">
-                  <div>
-                    Rate from 1 - 5:
+                  <div id="rating-container">
+                    <fieldset class="mb-3">
+                      <legend>Example checkbox question</legend>
 
-                    <input type="radio" id="option1" name="rating" value="1" />
-                    <label for="option1">1</label>
+                      <input
+                        type="checkbox"
+                        class="btn-check"
+                        id="btn-check-outlined"
+                        autocomplete="off"
+                      />
+                      <label
+                        class="btn btn-outline-primary mb-1"
+                        for="btn-check-outlined"
+                        >Value 1</label
+                      ><br />
 
-                    <input type="radio" id="option2" name="rating" value="2" />
-                    <label for="option2">2</label>
+                      <input
+                        type="checkbox"
+                        class="btn-check"
+                        id="btn-check-2-outlined"
+                        autocomplete="off"
+                      />
+                      <label
+                        class="btn btn-outline-primary mb-1"
+                        for="btn-check-2-outlined"
+                        >Value 2</label
+                      ><br />
 
-                    <input type="radio" id="option3" name="rating" value="3" />
-                    <label for="option3">3</label>
+                      <input
+                        type="checkbox"
+                        class="btn-check"
+                        id="btn-check-3-outlined"
+                        autocomplete="off"
+                      />
+                      <label
+                        class="btn btn-outline-primary mb-1"
+                        for="btn-check-3-outlined"
+                        >Value 3</label
+                      ><br />
+                    </fieldset>
+                    <fieldset class="mb-3">
+                      <legend>Example radio button question</legend>
+
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="options-outlined"
+                        id="success-outlined-1"
+                        autocomplete="off"
+                      />
+                      <label
+                        class="btn btn-outline-primary mb-1"
+                        for="success-outlined-1"
+                        >Value 1</label
+                      ><br />
+
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="options-outlined"
+                        id="success-outlined-2"
+                        autocomplete="off"
+                      />
+                      <label
+                        class="btn btn-outline-primary mb-1"
+                        for="success-outlined-2"
+                        >Value 2</label
+                      ><br />
+
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="options-outlined"
+                        id="success-outlined-3"
+                        autocomplete="off"
+                      />
+                      <label
+                        class="btn btn-outline-primary mb-1"
+                        for="success-outlined-3"
+                        >Value 3</label
+                      >
+                    </fieldset>
+
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label"
+                        >Example text field question</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="exampleFormControlTextarea1"
+                        class="form-label"
+                        >Example text area question</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="exampleFormControlTextarea1"
+                        rows="3"
+                      ></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3 mb-3
+                    ">
+                      SUBMIT
+                    </button>
                   </div>
-                  <div>
-                    <label for="additional-remarks">Additional remarks:</label>
-                    <textarea
-                      name="additional-remarks"
-                      id="additional-remarks"
-                      cols="30"
-                      rows="10"
-                    ></textarea>
-                  </div>
-                  <button type="submit">Submit</button>
                 </form>
               </article>
             </div>
