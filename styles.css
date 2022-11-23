@@ -71,19 +71,6 @@ main.container-fluid {
   border-radius: 0.25rem;
 }
 
-main .feedback-container {
-  position: fixed;
-  right: 30px;
-  width: 23.5%;
-  border-radius: 1rem;
-}
-
-#myTab button {
-  padding: 0;
-  border: none;
-  border-radius: 1rem 1rem 0 0;
-}
-
 .feedback-container,
 .video-player,
 #pills-tab {
@@ -108,134 +95,8 @@ main .feedback-container {
   border-radius: 0 0 1rem 1rem;
 }
 
-#myTab {
-  width: 100%;
-  background-color: rgb(223, 217, 217);
-  border-radius: 1rem 1rem 0 0;
-}
-
-#myTab button {
-  color: rgb(160, 160, 160);
-  width: 100%;
-}
-
-#myTab button[class~="active"] {
-  color: rgb(10, 39, 106);
-  background-color: white;
-}
-
-#myTabContent {
+main {
   display: flex;
-  position: relative;
-  padding-bottom: 0.75rem;
-}
-
-#question-tab-pane {
-  width: 100%;
-  display: flex;
-  padding: 1.25rem;
-}
-
-.nav-item {
-  flex-grow: 1;
-  border-radius: 1rem;
-}
-
-.nav-link {
-  border: none;
-  height: 70px;
-}
-
-#question-container {
-  width: 100%;
-  padding: 10px 10px 0 10px;
-}
-
-#question-container > form {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-#question-container label {
-  color: rgb(228, 13, 124);
-  font-weight: bold;
-  font-size: 1.125rem;
-  margin-bottom: 0.5rem;
-}
-
-#evaluation-container legend,
-#evaluation-container label.form-label {
-  color: rgb(228, 13, 124);
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.feedback-container textarea {
-  height: 90%;
-  border-radius: 1rem;
-  border: 2px solid rgb(223, 217, 217);
-  resize: none;
-}
-
-#question-container .btn.btn-primary {
-  margin: 1rem 0 0 0;
-  padding: 1rem;
-}
-
-#evaluation-tab-pane,
-#polling-tab-pane {
-  position: absolute;
-  top: 10px;
-  width: 100%;
-  padding: 0 1rem 0 1rem;
-}
-
-#evaluation-tab-pane label,
-#evaluation-tab-pane input,
-#polling-tab-pane input {
-  border-radius: 1rem;
-}
-
-#evaluation-tab-pane button,
-#polling-tab-pane button {
-  padding: 1rem;
-  width: 100%;
-}
-
-#evaluation-container,
-#polling-container {
-  padding: 1rem 1rem 0 1rem;
-}
-
-#evaluation-container,
-#evaluation-container form {
-  height: 100%;
-}
-
-.btn-outline-primary {
-  background-color: rgb(223, 217, 217);
-  color: rgb(5, 22, 59);
-  border: none;
-  width: 100%;
-  border-radius: 1rem;
-}
-
-.btn-check:hover + .btn {
-  background-color: rgb(179, 179, 179);
-  color: rgb(5, 22, 59);
-}
-
-.btn-check:checked + .btn {
-  background-color: rgb(228, 13, 124);
-}
-
-#rating-container,
-#poll-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 
 .row,
@@ -244,7 +105,7 @@ main .feedback-container {
   margin: 30px 0;
 }
 
-.col-9 {
+.content-container {
   padding-left: 0;
 }
 
@@ -286,22 +147,6 @@ main .feedback-container {
   text-align: left;
 }
 
-.register-interest {
-  display: flex;
-  justify-content: center;
-}
-
-.register-interest button {
-  width: 90%;
-  padding: 0.9rem;
-}
-
-.register-interest {
-  position: fixed;
-  border-radius: 1rem;
-  margin-top: 2rem;
-}
-
 .main-content {
   width: 100%;
   margin: 50px 0;
@@ -337,6 +182,10 @@ main .feedback-container {
   border-radius: 0 1rem 1rem 0;
 }
 
+article > .container-fluid {
+  padding: 0;
+}
+
 h2 {
   font-size: 4rem;
   font-weight: normal;
@@ -358,6 +207,10 @@ h2::after {
 
 .faculty-members-row {
   margin-top: 5rem;
+}
+
+.faculty-members-row + div {
+  padding: 0;
 }
 
 .faculty-members div.col-4 {
@@ -513,9 +366,7 @@ time:first-of-type:after {
 }
 
 footer {
-  position: relative;
-  bottom: 0;
-  z-index: 1;
+  position: sticky;
   height: 25vh;
 }
 
@@ -564,4 +415,161 @@ footer a {
 
 .account {
   font-weight: bold;
+}
+
+.sidebar-container {
+  position: fixed;
+  width: 25%;
+  left: 75%;
+  padding-right: 1.5%;
+  margin-top: 30px;
+  /* height: calc(56.25vw); */
+}
+
+#myTab {
+  width: 100%;
+  background-color: rgb(223, 217, 217);
+  border-radius: 1rem 1rem 0 0;
+}
+
+#myTab button {
+  padding: 0;
+  border: none;
+  border-radius: 1rem 1rem 0 0;
+  color: rgb(160, 160, 160);
+  width: 100%;
+}
+
+#myTabContent {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.fade:not(.show) {
+  opacity: 0;
+}
+
+.fade {
+  transition: opacity 0.15s linear;
+}
+
+#question-tab-pane {
+  width: 100%;
+  padding: 1.25rem;
+}
+
+.feedback-container {
+  min-height: fit-content;
+  /* max-height: calc(40.25vw); */
+}
+
+.feedback-container textarea {
+  border-radius: 1rem;
+  border: 2px solid rgb(223, 217, 217);
+}
+
+.feedback-container .btn.btn-primary {
+  margin: 1rem 0 0 0;
+  padding: 1rem;
+}
+
+#question-container {
+  width: 100%;
+  padding: 10px 10px 0 10px;
+}
+
+#question-container > form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#question-container label {
+  color: rgb(228, 13, 124);
+  font-weight: bold;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+#question-container textarea {
+  height: 25rem;
+}
+
+.nav-item {
+  flex-grow: 1;
+  border-radius: 1rem;
+}
+
+.nav-link {
+  border: none;
+  height: 70px;
+}
+
+.sidebar-container .tab-content {
+  overflow-y: auto;
+  max-height: calc(36vw);
+}
+
+.tab-content legend,
+.tab-content label.form-label {
+  color: rgb(228, 13, 124);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.tab-content button {
+  padding: 1rem;
+  width: 100%;
+}
+
+#polling-tab-pane {
+  position: relative;
+}
+
+#evaluation-tab-pane label,
+#evaluation-tab-pane input {
+  border-radius: 1rem;
+}
+
+#evaluation-container,
+#polling-container {
+  padding: 1rem 1rem 0 1rem;
+}
+
+.btn-outline-primary {
+  background-color: rgb(223, 217, 217);
+  color: rgb(5, 22, 59);
+  border: none;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.btn-check:hover + .btn {
+  background-color: rgb(179, 179, 179);
+  color: rgb(5, 22, 59);
+}
+
+.btn-check:checked + .btn {
+  background-color: rgb(228, 13, 124);
+}
+
+.register-interest {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  padding-right: 0.4%;
+}
+
+.register-interest button {
+  width: 90%;
+  padding: 0.9rem;
+}
+
+.body-container {
+  width: 75%;
 }
