@@ -423,7 +423,6 @@ footer a {
   left: 75%;
   padding-right: 1.5%;
   margin-top: 30px;
-  /* height: calc(56.25vw); */
 }
 
 #myTab {
@@ -463,6 +462,7 @@ footer a {
 .feedback-container {
   min-height: fit-content;
   /* max-height: calc(40.25vw); */
+  /* height: calc(56.25vw); */
 }
 
 .feedback-container textarea {
@@ -572,4 +572,154 @@ footer a {
 
 .body-container {
   width: 75%;
+}
+
+.sidebar-container-stacked,
+  .register-interest-stacked {
+    display: none;
+  }
+
+  .sitefooter-container-stacked {
+    display: none;
+  }
+
+@media screen and (max-width: 1550px) {
+  header nav.navbar {
+    padding: 1rem;
+  }
+
+  .body-container > div.row > div{
+    padding-right: 0;
+  }
+
+  #myTabContent {
+    max-height: calc(50vh);
+  }
+
+  .feedback-container,
+  .tab-pane {
+    height: auto;
+  }
+
+  #question-container textarea {
+    height: 12rem;
+  }
+
+  .video-player-container {
+    height: calc(60vh);
+  }
+
+  .video-player-container > div:first-of-type {
+    padding: 0 !important;
+    height: 100%;
+  }
+
+  .sidebar-container-stacked,
+  .register-interest-stacked {
+    display: none;
+  }
+
+  .register-interest > .col-6:last-of-type .btn.btn-primary {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  footer {
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .video-player-container {
+    height: calc(100vh - 15rem);
+  }
+
+  .video-player[style] {
+    position: static !important;
+  }
+
+  .body-container {
+    width: 100%;
+  }
+
+  .sidebar-container {
+    display: none;
+  }
+
+  .sidebar-container-stacked,
+  .register-interest-stacked {
+    margin-top: 2rem;
+    display: block;
+  }
+
+  #myTabContent {
+    max-height: fit-content;
+  }
+
+  .register-interest-stacked {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-right: 0;
+  }
+
+  .register-interest-stacked .row {
+    margin: 0;
+  }
+  .register-interest-stacked .row > .col-6 {
+    padding: 0;
+    flex-grow: 1;
+    width: 10%;
+  }
+
+  .register-interest-stacked button {
+    width: 90%;
+    padding: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .faculty-members-row .faculty-members div.col-4{
+    width: 100%;
+    margin-bottom: 7rem;
+  }
+
+  .posters-container div.col-4, .resources-container div.col-4, .breakout-spaces div.col-4, #faculty > .faculty-members div.col-4{
+    width: 100%;
+  }
+
+  .faculty-members div.col-4:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .sitefooter-container {
+    display: none;
+  }
+
+  .sitefooter-container-stacked {
+    display: block;
+  }
+
+  #footer-info {
+    align-items: center;
+  }
+
+  .sitefooter-container-stacked #footer-info > div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .site-links {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 }
