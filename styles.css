@@ -110,7 +110,7 @@ main {
 }
 
 .accordion-button,
-.accordion-button:not(.collapsed) {
+.accordion-button:not(.collapsed){
   background-color: rgb(10, 39, 106);
   color: white;
 }
@@ -570,25 +570,30 @@ footer a {
   padding: 0.9rem;
 }
 
+.register-interest button[class~='active'] {
+  background-color: rgb(10, 39, 106)
+}
+
 .body-container {
   width: 75%;
 }
 
 .sidebar-container-stacked,
-  .register-interest-stacked {
-    display: none;
-  }
+.register-interest-stacked {
+  display: none;
+}
 
-  .sitefooter-container-stacked {
-    display: none;
-  }
+.sitefooter-container-stacked {
+  display: none;
+}
+
 
 @media screen and (max-width: 1550px) {
   header nav.navbar {
     padding: 1rem;
   }
 
-  .body-container > div.row > div{
+  .body-container > div.row > div {
     padding-right: 0;
   }
 
@@ -683,12 +688,15 @@ footer a {
 }
 
 @media screen and (max-width: 1000px) {
-  .faculty-members-row .faculty-members div.col-4{
+  .faculty-members-row .faculty-members div.col-4 {
     width: 100%;
     margin-bottom: 7rem;
   }
 
-  .posters-container div.col-4, .resources-container div.col-4, .breakout-spaces div.col-4, #faculty > .faculty-members div.col-4{
+  .posters-container div.col-4,
+  .resources-container div.col-4,
+  .breakout-spaces div.col-4,
+  #faculty > .faculty-members div.col-4 {
     width: 100%;
   }
 
