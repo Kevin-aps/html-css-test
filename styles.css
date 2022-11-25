@@ -576,7 +576,7 @@ footer a {
   border-radius: 1rem;
 }
 
-.btn-check:hover + .btn {
+.btn-check + .btn:hover {
   background-color: rgb(179, 179, 179);
   color: rgb(5, 22, 59);
 }
