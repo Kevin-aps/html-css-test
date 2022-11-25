@@ -1,6 +1,17 @@
 const register = document.getElementById("register");
 const calendar = document.getElementById("calendar");
-const calendarModal = document.getElementById('calendarModal')
+const buttons = document.querySelectorAll('[class~="btn"]');
+const welcome = document.getElementById("welcome-container");
+const facultyMembers = document.querySelector("#faculty");
+
+
+  buttons.forEach((button) => {
+    if (button.innerText === "READ MORE" || button.innerHTML.includes("READ MORE")) {
+      button.setAttribute("data-bs-toggle", "modal");
+      button.setAttribute("data-bs-target", "#facultyModal");
+    }
+  });
+
 
 const addActiveClass = (e) => {
   console.log(e);
@@ -14,3 +25,5 @@ const addActiveClass = (e) => {
 
 register.addEventListener("click", addActiveClass);
 calendar.addEventListener("click", addActiveClass);
+
+

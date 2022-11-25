@@ -110,7 +110,7 @@ main {
 }
 
 .accordion-button,
-.accordion-button:not(.collapsed){
+.accordion-button:not(.collapsed) {
   background-color: rgb(10, 39, 106);
   color: white;
 }
@@ -291,6 +291,37 @@ div.col-4 > .card {
   padding-top: 7.5rem;
 }
 
+.modal {
+  --bs-modal-width: 100%;
+  --bs-modal-border-radius: 1rem;
+}
+
+.modal a {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-decoration: underline;
+  color: rgb(10, 39, 106);
+}
+
+.modal-content {
+  border: none;
+}
+
+.modal-content .card {
+  border: none;
+  border-radius: 1rem;
+}
+
+.modal-dialog {
+  width: 40%;
+  text-align: center;
+  border: none;
+}
+
+.modal-body .faculty-content {
+  margin-top: 6.25rem;
+}
+
 .breakout-spaces .card-title,
 .resources-container .card-title {
   margin-top: 1.5rem;
@@ -461,8 +492,6 @@ footer a {
 
 .feedback-container {
   min-height: fit-content;
-  /* max-height: calc(40.25vw); */
-  /* height: calc(56.25vw); */
 }
 
 .feedback-container textarea {
@@ -570,8 +599,8 @@ footer a {
   padding: 0.9rem;
 }
 
-.register-interest button[class~='active'] {
-  background-color: rgb(10, 39, 106)
+.register-interest button[class~="active"] {
+  background-color: rgb(10, 39, 106);
 }
 
 .body-container {
@@ -587,8 +616,7 @@ footer a {
   display: none;
 }
 
-
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1920px) {
   header nav.navbar {
     padding: 1rem;
   }
@@ -596,6 +624,12 @@ footer a {
   .body-container > div.row > div {
     padding-right: 0;
   }
+
+  .modal.show .modal-dialog {
+    width: 90%;
+    transform: translateY(10%); 
+  }
+
 
   #myTabContent {
     max-height: calc(50vh);
@@ -688,6 +722,10 @@ footer a {
 }
 
 @media screen and (max-width: 1000px) {
+  .modal-dialog {
+    width: 80%;
+  }
+
   .faculty-members-row .faculty-members div.col-4 {
     width: 100%;
     margin-bottom: 7rem;
